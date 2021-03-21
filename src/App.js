@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import TextMask from './components/TextMask';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import MaskZoomOut from './components/MaskZoomOut';
+import PageSlide from './components/PageSlide';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route path='/' exact component={TextMask} />
+          <Route path='/mask' component={MaskZoomOut} />
+          <Route path='/page' component={PageSlide} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 

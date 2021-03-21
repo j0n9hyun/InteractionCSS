@@ -1,0 +1,17 @@
+@import './common.scss';
+
+button {
+  width: 300px;
+  border: 1px solid gray;
+  font-size: 3rem;
+}
+
+button:hover {
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+}
+
+body {
+  transition: background 2.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
